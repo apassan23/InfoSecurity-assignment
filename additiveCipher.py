@@ -3,19 +3,21 @@ class AdditiveCipher:
         self.text = text
         self.shift = 0
 
+    def encryptChar(self, char):
+        if char.islower():
+            return chr((((ord(char) - 97) + self.shift) % 26) + 97)
+        elif char.isupper():
+            return chr((((ord(char) - 65) + self.shift) % 26) + 65)
+
     def encrypt(self, shift):
         self.shift = shift
-        for i in range(len(self.text)):
-            if self.text[i].islower():
-                self.text = self.text[:i] + chr((((ord(self.text[i]) - 97) + self.shift) % 26) + 97) + self.text[i + 1:]
-            elif self.text[i].isupper():
-                self.text = self.text[:i] + chr((((ord(self.text[i]) - 65) + self.shift) % 26) + 65) + self.text[i + 1:]
+        self.text = "".join(map(self.encryptChar, self.text))
 
     def decrypt(self, text = "", shift = 0):
 
         if len(text) != 0:
             self.text = text
-            self.shift = shift
+        self.shift = shift
 
         if self.shift != 0:
             shift = 26 - self.shift

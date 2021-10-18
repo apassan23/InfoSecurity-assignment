@@ -19,15 +19,10 @@ def main():
             text = input("Enter a Text (Leave Empty to use previously encrypted Text): ")
             shift = input("Enter a shift value (Leave Empty to use previous Shift): ")
 
-            if len(text) == 0:
-                if len(shift) == 0:
-                    cipher.decrypt()
+            if len(shift) == 0:
+                cipher.decrypt(text)
             else:
-                cipher = AdditiveCipher()
-                if len(shift) == 0:
-                    cipher.decrypt(text)
-                else:
-                    cipher.decrypt(text, shift = int(shift))
+                cipher.decrypt(text, shift = int(shift))
 
             print("Decrypted Text:", cipher)
 
