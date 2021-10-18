@@ -1,7 +1,10 @@
 # Information Security Assignment
+
 Repository for Information Security Assignment
+
 ## Contents
-- Additive Cipher (TBD)
+
+- Additive Cipher
 - Affine Cipher (TBD)
 - Frequency Attack on additive cipher without human intervention (TBD)
 - Letter frequency attack on monoalphabetic substitution cipher (TBD)
