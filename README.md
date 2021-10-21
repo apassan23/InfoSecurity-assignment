@@ -6,6 +6,6 @@ Repository for Information Security Assignment
 
 - Additive Cipher
 - Affine Cipher
-- Frequency Attack on additive cipher without human intervention (TBD)
-- Letter frequency attack on monoalphabetic substitution cipher (TBD)
+- Frequency Attack on additive cipher without human intervention
+- Letter frequency attack on monoalphabetic substitution cipher
 - 2 X 2 Hill Cipher
